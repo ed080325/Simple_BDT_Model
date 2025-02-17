@@ -75,12 +75,13 @@ class BDT:
         max_rows = max(len(arr) for arr in r_tree)  # Find the max number of rows (longest array in r_tree)
         # Present r_tree in a table for easier visualisation
         table_data = []
-        m_row = []
+        m_row = ["0"]
         i_row = []
         j_row = []
         for i in range(max_rows):
             i_row.append(i)
             j_row.append("")
+        for i in range(max_rows - 1):
             m_row.append(self.maturities[i])
         table_data.append(m_row)
         table_data.append(theta_labels)  
